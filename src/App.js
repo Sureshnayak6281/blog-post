@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import BlogPostList from './components/blogpostlist';
 import BlogPostDetails from './components/blogpostdetails';
 
@@ -8,18 +8,18 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(
-          'https://newsapi.org/v2/everything?q=tesla&from=2024-06-18&sortBy=publishedAt&apiKey=37e8b94ccbca495e88359d946bca82ec'
-        );
-        setPosts(response.data.articles);
-      } catch (error) {
-        console.error('Error fetching posts:', error);
-      }
-    };
+    // const fetchPosts = async () => {
+    //   try {
+    //     const response = await axios.get(
+    //       'http://localhost:3000/api/news'
+    //     );
+    //     setPosts(response.data.articles);
+    //   } catch (error) {
+    //     console.error('Error fetching posts:', error);
+    //   }
+    // };
 
-    fetchPosts();
+    // fetchPosts();
   }, []);
 
   return (

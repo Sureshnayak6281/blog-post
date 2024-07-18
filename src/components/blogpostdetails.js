@@ -12,7 +12,7 @@ const BlogPostDetails = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=tesla&from=2024-06-18&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+          `http://localhost:3000/api/news`
         );
         setPost(response.data.articles[id]);
       } catch (error) {
